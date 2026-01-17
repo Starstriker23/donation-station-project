@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>The Donation Station</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    h1 {
+      font-size: 4vw;
+    }
+    h2 {
+      margin: 20px 10px 10px;
+      font-size: 20px;
+      border-bottom: 2px solid #888;
+      padding-bottom: 5px;
+    }
+    p {
+      margin: 10px;
+      font-size: 16px;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: PowderBlue;
+      display: flex;
+      justify-content: center;
+    }
+    ul li a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    ul li a:hover {
+      background-color: SkyBlue;
+    }
+    .donation {
+      float: left;
+      margin: 10px;
+      height: auto;
+      max-width: 20%;
+    }
+    form {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    @media screen and (max-width: 600px) {
+      form {
+        position: static;
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+      }
+    }
+    .socials {
+      display: block;
+      text-align: center;
+      background-color: PowderBlue;
+      padding: 0;
+      margin: 0;
+    }
+    .socials li {
+      margin: 11px 0;
+    }
+    .profile-section {
+      margin: 100px;
+      padding: 15px;
+      border: 2px solid #ccc;
+      background-color: #f9f9f9;
+      clear: both; /* ensures sections start below the floated icon */
+    }
+    .profile-section ul {
+      background-color: transparent;
+      display: block;
+      margin: 10px 0;
+      padding: 0;
+    }
+    .profile-section li {
+      margin: 5px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .remove-btn {
+      background-color: #ff6666;
+      border: none;
+      color: white;
+      padding: 4px 8px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    .remove-btn:hover {
+      background-color: #cc0000;
+    }
+	
+	
+	a h1 {
+	  color: black;          /* or any color you want */
+	  text-decoration: none; /* removes underline */
+	}
+
+  </style>
+</head>
+<body>
+  <form action="">
+    <input type="text" placeholder="Search For Items...">
+  </form>
+
+		<a href="index(1).html"><h1 style="text-align: center">&#127775<em>The Donation Station</em>&#127775</h1></a>
+
+  <ul>
+	<li><a href="index(1).html">Home</a></li>
+    <li><a href="results.html">All Items</a></li>
+    <li><a href="results.html">Devices</a></li>
+    <li><a href="results.html">Clothing</a></li>
+    <li><a href="results.html">Books</a></li>
+    <li><a href="profile.html">My Profile</a></li>
+  </ul>
+
+  <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+       alt="Profile Picture" class="donation">
+
+  <!-- Saved Items Section -->
+  <div class="profile-section" id="saved-items">
+    <h2>Saved Items</h2>
+	<div class="listing" data-date="2025-10-15" data-price="21.99" data-quality="2">
+		<div class="image-row">
+			<a href="item.html">
+				<img src="https://mohawk-static.bookware3000.ca/item/large/e4/e45dbee894204a7a11c12b39bc05b4ef87e37bff7f63075ab1d3f544d65b52ef.jpg"
+					width="250" height="250" alt="up">
+			</a>
+			<p>
+			    <br><strong>Mohawk College Blk On Blk <br>Hoodie - $21.99</strong>
+			    <br><br>Quality: Somewhat Good
+			    <br><br><button class="remove-btn">Remove</button>			
+			</p>
+		</div>
+	</div>
+   </div>
+
+  <!-- Purchase History Section -->
+  <div class="profile-section">
+    <h2>Purchase History</h2>
+    <ul>
+      <li>None yet.</li>
+    </ul>
+  </div>
+
+  <ul class="socials">
+    <li><a href="results.html">Twitter</a></li>
+    <li><a href="results.html">Instagram</a></li>
+    <li><a href="results.html">Bluesky</a></li>
+    <li><a href="results.html">TikTok</a></li>
+  </ul>
+
+<script>
+  document.querySelectorAll(".remove-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      // Find the closest ancestor with class "listing" and remove it
+      button.closest(".listing").remove();
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>The Donation Station</title>
+	  <style>
+		body {
+		  margin: 0;
+		  padding: 0;
+		  font-family: sans-serif;
+		}
+		h1 {
+		  font-size: 4vw;
+		}
+		h2, p {
+		  margin: 10px;
+		  font-size: 17px;
+		}
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: PowderBlue;
+		  display: flex;
+		  justify-content: center;
+		}
+		ul li a {
+		  display: block;
+		  color: black;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+		ul li a:hover {
+		  background-color: SkyBlue;
+		}
+		form {
+		  position: absolute;
+		  top: 10px;
+		  right: 10px;
+		}
+		@media screen and (max-width: 600px) {
+		  form {
+			position: static;
+			display: block;
+			margin: 10px auto;
+			text-align: center;
+		  }
+		  img {
+			height: 100%;
+			width: 70%;
+		  }
+		}
+		.socials {
+		  display: block;
+		  text-align: center;
+		  background-color: PowderBlue;
+		  padding: 0;
+		  margin: 0;
+		}
+		.socials li {
+		  margin: 11px 0;
+		}
+		img {
+		  display: block;
+		  margin-left: auto;
+		  margin-right: auto;
+		  height: 250px;
+		}
+		.image-row {
+		  display: flex;
+		  gap: 30px;
+		  align-items: flex-start;
+		  justify-content: center;
+		  margin: 20px;
+		}
+		.image-row img {
+		  object-fit: cover;
+		  border: 2px solid #ccc;
+		}
+		.save-btn {
+		  margin-top: 8px;
+		  padding: 6px 12px;
+		  background-color: PowderBlue;
+		  border: 1px solid #888;
+		  border-radius: 4px;
+		  cursor: pointer;
+		  font-size: 14px;
+		}
+		.save-btn:hover {
+		  background-color: SkyBlue;
+		}
+		.save-btn.saved {
+		  background-color: pink;
+		}
+		.item-image {
+		  max-width: 400px;
+		  height: auto;
+		  border: 2px solid #ccc;
+		}
+		.item-info {
+		  max-width: 400px;
+		  height: auto;
+		  border: 2px solid #ccc;
+		}
+		.seller-description {
+		  margin-top: 20px;
+		  padding: 15px;
+		  border: 1px solid #888;
+		  background-color: #f9f9f9;
+		}
+		.seller-description h3 {
+		  margin-top: 0;
+		}
+		.image-container {
+		  position: relative;
+		  display: inline-block;
+		}
+		.arrow-btn {
+		  position: absolute;
+		  top: 50%;
+		  transform: translateY(-50%);
+		  padding: 6px 10px;
+		  font-size: 18px;
+		  cursor: pointer;
+		}
+		#prevImageBtn {
+		  left: -20px;   /* places left arrow */
+		}
+
+		#nextImageBtn {
+		  right: -20px;  /* places right arrow */
+		}
+		.arrow-btn:disabled {
+		  opacity: 0.5;
+		  cursor: not-allowed;
+		}
+			
+		a h1 {
+		  color: black;          /* or any color you want */
+		  text-decoration: none; /* removes underline */
+		}
+
+	  </style>
+	</head>
+	<body>
+	  <form action="">
+		<input type="text" placeholder="Search For Items...">
+	  </form>
+
+		<a href="index(1).html"><h1 style="text-align: center">&#127775<em>The Donation Station</em>&#127775</h1></a>
+
+	  <ul>
+		<li><a href="index(1).html">Home</a></li>
+		<li><a href="results.html">All Items</a></li>
+		<li><a href="results.html">Devices</a></li>
+		<li><a href="results.html">Clothing</a></li>
+		<li><a href="results.html">Books</a></li>
+		<li><a href="profile.html">My Profile</a></li>
+	  </ul>
+
+	  <div class="item-page">
+		<div class="image-row">
+		<div class="image-container">
+		  <button id="prevImageBtn" class="arrow-btn">⬅</button>
+		  <img src="https://mohawk-static.bookware3000.ca/item/large/e4/e45dbee894204a7a11c12b39bc05b4ef87e37bff7f63075ab1d3f544d65b52ef.jpg"
+			   alt="Black Hoodie" class="item-image" id="mainImage">
+		  <button id="nextImageBtn" class="arrow-btn">➡</button>
+		</div>
+
+		  <div class="item-info">
+			<h2>Mohawk College Blk On Blk Hoodie - $21.99</h2>
+			<p>
+			  <strong>Material:</strong> 100% Polyester<br>
+			  <strong>Size:</strong> Small<br>
+			  <strong>Exterior color:</strong> Black<br>
+			  <strong>Interior color:</strong> Black<br>
+			  <strong>Quality:</strong> Somewhat Good
+			</p>
+			<button class="save-btn">Save For Later</button>
+			<div class="seller-description">
+			  <h3>Seller's Description</h3>
+			  <p>
+				This hoodie has been lightly worn for about 1 year and is still in great condition. 
+				Comfortable fit, perfect for everyday use. Selling because I no longer need it. 
+				Pickup available on campus or delivery can be arranged.
+			  </p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	  <ul class="socials">
+		<li><a href="results.html">Twitter</a></li>
+		<li><a href="results.html">Instagram</a></li>
+		<li><a href="results.html">Bluesky</a></li>
+		<li><a href="results.html">TikTok</a></li>
+	  </ul>
+
+<script>
+  // Toggle Save button
+  document.querySelectorAll(".save-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      if (button.classList.contains("saved")) {
+        button.textContent = "Save For Later";
+        button.classList.remove("saved");
+      } else {
+        button.textContent = "Saved!";
+        button.classList.add("saved");
+      }
+    });
+  });
+
+  // Image carousel (only declare once!)
+  const images = [
+    "https://mohawk-static.bookware3000.ca/item/large/e4/e45dbee894204a7a11c12b39bc05b4ef87e37bff7f63075ab1d3f544d65b52ef.jpg",
+    "https://mohawk-static.bookware3000.ca/item/large/e4/e45dbee894204a7a11c12b39bc05b4ef87e37bff7f63075ab1d3f544d65b52ef.jpg" // demo duplicate
+  ];
+
+  let currentIndex = 0;
+  const mainImage = document.getElementById("mainImage");
+  const nextBtn = document.getElementById("nextImageBtn");
+  const prevBtn = document.getElementById("prevImageBtn");
+
+  function updateButtons() {
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex === images.length - 1;
+  }
+
+  updateButtons();
+
+  nextBtn.addEventListener("click", () => {
+    if (currentIndex < images.length - 1) {
+      currentIndex++;
+      mainImage.src = images[currentIndex];
+      updateButtons();
+    }
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      mainImage.src = images[currentIndex];
+      updateButtons();
+    }
+  });
+</script>
+	</body>
+</html>
